@@ -21,7 +21,11 @@ function grade(score) {
      * Also take into consideration the documentation of the function!
      */
     // PLACE YOUR CODE BETWEEN THIS...
-
+    if(score >= 0 && score <=100) {
+        gradeOfStudent = 1 + (score > 59) + (score > 69) + (score > 79) + (score > 89)
+    }else{
+        gradeOfStudent = 0
+    }
     // ...AND THIS COMMENT LINE!
     return gradeOfStudent;
 }

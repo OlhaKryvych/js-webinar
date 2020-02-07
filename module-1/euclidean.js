@@ -16,8 +16,21 @@ function euclidean(a, b) {
      * Also take into consideration the documentation of the function!
      */
     // PLACE YOUR CODE BETWEEN THIS...
-
-
+    if(a > 0 && b > 0){
+        nod = (a, b)=> {
+            if(a < b){
+                [a, b] = [b, a]
+            }
+            let rest = a % b
+            if(rest === 0){
+                return b
+            }
+            return nod(b, rest)
+        }
+        gcd = nod(a, b)
+    }else {
+        gcd = 0
+    }
     // ...AND THIS COMMENT LINE!
     return gcd;
 }

@@ -15,7 +15,17 @@ function fibonacci(n) {
      * Also take into consideration the documentation of the function!
      */
     // PLACE YOUR CODE BETWEEN THIS...
-
+    if(n >= 0){
+        fib = (n) => {
+            if(n < 2){
+                return n
+            }
+            return fib(n - 1) + fib(n - 2)
+        }
+        nThFibonacci = fib(n)
+    }else{
+        nThFibonacci = 0
+    }
     // ...AND THIS COMMENT LINE!
     return nThFibonacci;
 }
